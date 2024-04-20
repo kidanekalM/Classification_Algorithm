@@ -1,0 +1,3 @@
+Select the data set
+Choose an algorithm
+Implement algorithm

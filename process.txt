@@ -1,3 +1,7 @@
 Select the data set
-Choose an algorithm
-Implement algorithm
+preprocess (if needed )
+    - Normalization 
+Choose an algorithm: most likely 
+    - Best for continious data
+    - Simple
+Implement algorithm 

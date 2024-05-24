@@ -4,6 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import tree
 from sklearn.metrics import accuracy_score
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Step 2: Load your dataset
 data = pd.read_csv("dataset.csv")
@@ -12,6 +13,7 @@ data = pd.read_csv("dataset.csv")
 X = data.drop('condition', axis=1)  # Features
 y = data['condition']  # Target
 
+X = pd.get_dummies(X)
 # Step 4: Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -29,3 +31,5 @@ print("Accuracy:", accuracy_score(y_test, y_pred))
 
 # Step 9: To see the decision tree
 tree.plot_tree(clf)
+plt.show()
+plt.savefig('tree.png')

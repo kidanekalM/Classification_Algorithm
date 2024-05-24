@@ -16,8 +16,7 @@ y = data['Stress Level']  # Target
 
 X = pd.get_dummies(X)
 # Step 4: Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0., random_state=42)
-print(X_train,X_test,y_train,y_test)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
 # Step 5: Initialize the Decision Tree Classifier
 clf = tree.DecisionTreeClassifier()
